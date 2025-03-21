@@ -14,6 +14,11 @@ type CoinBalanceResponse struct {
 	Balance int64
 }
 
+type PostsResponse struct {
+	Code int
+	Posts int64
+}
+
 type Error struct {
 	Code int
 	Message string

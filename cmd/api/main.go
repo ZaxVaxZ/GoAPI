@@ -12,11 +12,11 @@ import (
 func main() {
 	log.SetReportCaller(true)
 	var r *chi.Mux = chi.NewRouter()
+	fmt.Print("Setting Up Service Handlers...\n")
 	handlers.Handler(r)
-	fmt.Print("Starting GO API Service.....\n")
+	fmt.Print("Starting GO API Service Listener...\n")
 	err := http.ListenAndServe("localhost:8000", r)
 	if err != nil {
 		log.Error(err)
 	}
-
 }

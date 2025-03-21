@@ -14,9 +14,15 @@ type CoinDetails struct {
 	Username string
 }
 
+type PostDetails struct {
+	Posts int64
+	Username string
+}
+
 type DatabaseInterface interface {
 	GetUserLoginDetails(username string) *LoginDetails
 	GetUserCoins(username string) *CoinDetails
+	GetPosts(username string) *PostDetails
 	SetupDatabase() error
 }
 
